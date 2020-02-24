@@ -428,7 +428,10 @@ export const makeQueryBuilder = schema => {
             result: {
               __aliasFor: queryName,
               __args: getArgs(queryType),
-              ...buildFieldsObject({ schema, modelName, queryType })
+              result: {
+                ...buildFieldsObject({ schema, modelName, queryType })
+              },
+              errors: true
             }
           }
         }
