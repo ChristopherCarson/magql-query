@@ -453,7 +453,7 @@ export const makeQueryBuilder = schema => {
             __variables: queryVariables,
             [`${queryType}${modelName}`]: {
               __args: getArgs(queryType),
-              [`${queryName}`]: {
+              ['result']: {
                 __typename: true,
                 id: true
               },
